@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,102 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calcApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calcola perimetro e area" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fz6-Vg-pg5">
+                                <rect key="frame" x="81" y="156" width="252" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Xv-SB-mT7">
+                                <rect key="frame" x="142" y="262" width="130" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f5S-Ho-eUe">
+                                <rect key="frame" x="142" y="334" width="130" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rQ-G2-Eum">
+                                <rect key="frame" x="159" y="423" width="96" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibu-eJ-gZz">
+                                <rect key="frame" x="56" y="532" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.44102123462253517" green="0.55113584390140846" blue="0.83921568629999999" alpha="0.78466109154929575" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Area">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="calcArea:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dGb-3n-f3p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubT-X0-tRm">
+                                <rect key="frame" x="142" y="532" width="130" height="30"/>
+                                <color key="backgroundColor" red="0.56190997359999995" green="0.55478471519999994" blue="0.65883713960000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Perimetro">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="calcPerimeter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jns-b8-PD0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI0-fg-T4A">
+                                <rect key="frame" x="298" y="532" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.56588023899999995" green="0.55059659480000001" blue="0.66668152810000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Pulisci">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VdB-7r-HNK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ubT-X0-tRm" firstAttribute="leading" secondItem="ibu-eJ-gZz" secondAttribute="trailing" constant="26" id="6aO-Sq-mcX"/>
+                            <constraint firstItem="6rQ-G2-Eum" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="Aha-hR-oKB"/>
+                            <constraint firstItem="9Xv-SB-mT7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="Alr-HZ-WzY"/>
+                            <constraint firstItem="fz6-Vg-pg5" firstAttribute="centerX" secondItem="9Xv-SB-mT7" secondAttribute="centerX" id="BGH-sr-HbD"/>
+                            <constraint firstItem="f5S-Ho-eUe" firstAttribute="leading" secondItem="ubT-X0-tRm" secondAttribute="leading" id="Fit-jv-JgB"/>
+                            <constraint firstItem="ibu-eJ-gZz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="PpO-9e-cqR"/>
+                            <constraint firstItem="f5S-Ho-eUe" firstAttribute="top" secondItem="9Xv-SB-mT7" secondAttribute="bottom" constant="38" id="RZ6-NB-FIH"/>
+                            <constraint firstItem="ubT-X0-tRm" firstAttribute="top" secondItem="6rQ-G2-Eum" secondAttribute="bottom" constant="88.5" id="Uyb-4q-Wgj"/>
+                            <constraint firstItem="9Xv-SB-mT7" firstAttribute="leading" secondItem="f5S-Ho-eUe" secondAttribute="leading" id="Vcd-ZC-Fea"/>
+                            <constraint firstItem="fz6-Vg-pg5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WC2-Ku-0id"/>
+                            <constraint firstItem="9Xv-SB-mT7" firstAttribute="top" secondItem="fz6-Vg-pg5" secondAttribute="bottom" constant="84" id="cZs-OX-5qf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LI0-fg-T4A" secondAttribute="trailing" constant="56" id="d5f-js-H5k"/>
+                            <constraint firstItem="fz6-Vg-pg5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="fZN-0q-n7P"/>
+                            <constraint firstItem="ubT-X0-tRm" firstAttribute="baseline" secondItem="LI0-fg-T4A" secondAttribute="baseline" id="htj-cV-xVn"/>
+                            <constraint firstItem="9Xv-SB-mT7" firstAttribute="trailing" secondItem="f5S-Ho-eUe" secondAttribute="trailing" id="mCW-Wk-B1k"/>
+                            <constraint firstItem="fz6-Vg-pg5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="112" id="pFi-Jm-iis"/>
+                            <constraint firstItem="6rQ-G2-Eum" firstAttribute="top" secondItem="f5S-Ho-eUe" secondAttribute="bottom" constant="55" id="rNO-FU-4lS"/>
+                            <constraint firstItem="f5S-Ho-eUe" firstAttribute="centerX" secondItem="6rQ-G2-Eum" secondAttribute="centerX" id="uXV-Cb-kgX"/>
+                            <constraint firstItem="f5S-Ho-eUe" firstAttribute="trailing" secondItem="ubT-X0-tRm" secondAttribute="trailing" id="vEP-uM-V9C"/>
+                            <constraint firstItem="LI0-fg-T4A" firstAttribute="leading" secondItem="ubT-X0-tRm" secondAttribute="trailing" constant="26" id="vmq-4U-D06"/>
+                            <constraint firstItem="ibu-eJ-gZz" firstAttribute="baseline" secondItem="ubT-X0-tRm" secondAttribute="baseline" id="xjI-LY-aX3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lblResult" destination="6rQ-G2-Eum" id="xZh-7H-XXy"/>
+                        <outlet property="txtHeight" destination="f5S-Ho-eUe" id="qye-SE-eSL"/>
+                        <outlet property="txtWidth" destination="9Xv-SB-mT7" id="MPF-b0-dKb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="120.53571428571428"/>
         </scene>
     </scenes>
 </document>
