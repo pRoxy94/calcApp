@@ -29,7 +29,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
     @IBAction func calcArea(_ sender: Any) {
         calc(what:"area")
     }
