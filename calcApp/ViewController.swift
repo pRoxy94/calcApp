@@ -10,12 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+//  TextFields and label
     @IBOutlet weak var txtWidth: UITextField!
     @IBOutlet weak var txtHeight: UITextField!
     @IBOutlet weak var lblResult: UILabel!
     
+//  Buttons
+    @IBOutlet weak var btnArea: UIButton!
+    @IBOutlet weak var btnPerimeter: UIButton!
+    @IBOutlet weak var btnClear: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnArea.layer.cornerRadius = 5
+        btnPerimeter.layer.cornerRadius = 5
+        btnClear.layer.cornerRadius = 5
         // Do any additional setup after loading the view.
     }
 
