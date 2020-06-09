@@ -34,6 +34,10 @@ class ViewController: UIViewController {
         lblResult?.text = "0"
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     func calc(what:String) {
         let w = NumberFormatter().number(from: txtWidth.text ?? "0") as? Double
         
