@@ -50,6 +50,5 @@ class ViewController: UIViewController {
             lblResult.text = "Wrong values"
         }
     }
-    
 }
 
