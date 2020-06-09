@@ -21,24 +21,31 @@ class ViewController: UIViewController {
 
 
     @IBAction func calcArea(_ sender: Any) {
-        let w = txtWidth.text
-        let h = txtHeight.text
-        if w != nil {
-            if h != nil {
-                
-            }
-        }
+        calc(what:"area")
     }
     
-    
-    
     @IBAction func calcPerimeter(_ sender: Any) {
+        calc(what: "perimeter")
     }
     
     @IBAction func clear(_ sender: Any) {
+        txtHeight?.text = ""
+        txtWidth?.text = ""
+        lblResult?.text = "0"
     }
     
-    
+    func calc(what:String) {
+        let w = NumberFormatter().number(from: txtWidth.text ?? "0") as? Double
+        
+        let h = NumberFormatter().number(from: txtHeight.text ?? "0") as? Double
+        
+        if w != nil && h != nil {
+            let result = what == "area" ? w!*h! : (w!+h!)*2
+            lblResult.text = String.localizedStringWithFormat("%1.2f", result)
+        } else {
+            lblResult.text = "Wrong values"
+        }
+    }
     
 }
 
